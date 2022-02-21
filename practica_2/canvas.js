@@ -23,68 +23,14 @@ function dibujarLinea (xInicial, yInicial, xFinal, yFinal, color){
     lienzo.closePath();
 }
 
-
-function dibujarRectanguo(x,y,ancho, alto, color){
-    lienzo.beginPath();
-
-    lienzo.strokeStyle=color;
-
-    lienzo.moveTo(x,y);
-
-    lienzo.lineTo(x, y+alto);
-    lienzo.lineTo(x+ancho, y+alto);
-    lienzo.lineTo(x+ancho,y);
-    lienzo.lineTo(x,y);
-    lienzo.stroke();
-    lienzo.closePath();
-    
-}
-//Dibujar cuadrados o rectangulos
-dibujarRectanguo(0,0,50,50,"red");
-
-
-function dibujarTrianguloEquilatero(x,y,largo, color){
-    lienzo.beginPath();
-    lienzo.strokeStyle=color;
-    var altura = Math.sqrt(3)*largo/2;
-
-
-    lienzo.moveTo(x,y);
-    lienzo.lineTo(x+(largo*0.5), y+altura)
-    lienzo.lineTo(x+largo,y)
-    lienzo.lineTo(x,y);
-
-    lienzo.stroke();
-    lienzo.closePath();
-}
-dibujarTrianguloEquilatero(0,0,50,"blue");
-
-function dibujarTrianguloIsoceles(x,y, largo, alto, color){
-    lienzo.beginPath();
-    lienzo.strokeStyle=color;
-
-    lienzo.moveTo(x,y);
-    lienzo.lineTo(x+(largo*0.5), y+alto)
-    lienzo.lineTo(x+largo,y)
-    lienzo.lineTo(x,y);
-
-    lienzo.stroke();
-    lienzo.closePath();
-}
-
-dibujarTrianguloIsoceles(0,0,50,70, "green");
-
-function dibujarTrianguloEscaleno(x_inicial,y_inicial, x_1, x_2, y_1, y_2, color){
-    lienzo.beginPath();
-    lienzo.strokeStyle=color;
-
-    lienzo.moveTo(x_inicial,y_inicial);
-    lienzo.lineTo(x_1, y_1);
-    lienzo.lineTo(x_2,y_2)
-    lienzo.lineTo(x_inicial,y_inicial);
-
-    lienzo.stroke();
-    lienzo.closePath();
-}
-
-dibujarTrianguloEscaleno(0,0, 150, 120, 100,  20, "violet");
+lienzo.fillStyle = "blue";
+lienzo.strokeStyle = "black";
+lienzo.lineWidth = 5;
+lienzo.beginPath();
+lienzo.moveTo(150,10);
+lienzo.lineTo(10,290);
+lienzo.lineTo(290,290);
+lienzo.lineTo(150,10);
+lienzo.stroke();
+lienzo.fill();
+lienzo.closePath();
