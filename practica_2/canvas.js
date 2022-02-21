@@ -34,3 +34,17 @@ lienzo.lineTo(150,10);
 lienzo.stroke();
 lienzo.fill();
 lienzo.closePath();
+
+
+//Arcos
+// triangulo relleno
+lienzo.fillStyle = "red";
+lienzo.strokeStyle = "black";
+lienzo.lineWidth = 5;
+lienzo.beginPath();
+lienzo.arc(100, 100, 60, 0, 3*Math.PI/2);
+lienzo.lineTo(100,100);
+lienzo.lineTo(160,100);
+lienzo.stroke();
+lienzo.fill();
+lienzo.closePath();
