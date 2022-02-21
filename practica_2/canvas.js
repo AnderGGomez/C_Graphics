@@ -48,3 +48,5 @@ lienzo.lineTo(160,100);
 lienzo.stroke();
 lienzo.fill();
 lienzo.closePath();
+
+https://artradarjournal.com/paintings/canvas/how-to-use-multiple-canvas-in-html5/
