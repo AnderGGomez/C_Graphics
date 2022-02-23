@@ -28,9 +28,7 @@ function dibujarRectanguo(x,y,ancho, alto, color){
     lienzo.beginPath();
 
     lienzo.strokeStyle=color;
-
     lienzo.moveTo(x,y);
-
     lienzo.lineTo(x, y+alto);
     lienzo.lineTo(x+ancho, y+alto);
     lienzo.lineTo(x+ancho,y);

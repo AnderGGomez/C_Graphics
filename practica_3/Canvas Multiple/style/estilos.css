@@ -1,0 +1,56 @@
+#contenedor1{
+    position:relative;
+    height: 300px;
+}
+
+#one{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+#two{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    right: 0px;
+}
+
+#contenedor2{
+    position: relative;
+    top: 25px;
+    height: 300px;
+}
+
+#three{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#four{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    right: 0px;
+}
+
+
+#draw_one{
+    border: 1px solid blue;
+}
+
+#draw_two{
+    border: 1px solid red;
+}
+
+#draw_three{
+    border: 1px solid green;
+}
+
+#draw_four{
+    border: 1px solid purple;
+}

@@ -23,6 +23,7 @@ function dibujarLinea (xInicial, yInicial, xFinal, yFinal, color){
     lienzo.closePath();
 }
 
+// triangulo relleno
 lienzo.fillStyle = "blue";
 lienzo.strokeStyle = "black";
 lienzo.lineWidth = 5;
@@ -37,7 +38,6 @@ lienzo.closePath();
 
 
 //Arcos
-// triangulo relleno
 lienzo.fillStyle = "red";
 lienzo.strokeStyle = "black";
 lienzo.lineWidth = 5;
@@ -49,4 +49,18 @@ lienzo.stroke();
 lienzo.fill();
 lienzo.closePath();
 
-https://artradarjournal.com/paintings/canvas/how-to-use-multiple-canvas-in-html5/
+
+lienzo.fillStyle = "red";
+lienzo.strokeStyle = "black";
+lienzo.lineWidth = 5;
+lienzo.beginPath();
+lienzo.arc(110, 90, 60, 0, 3*Math.PI/2, true);
+lienzo.lineTo(110,90);
+lienzo.lineTo(170,90);
+lienzo.stroke();
+lienzo.fill();
+lienzo.closePath();
+
+
+
+//https://artradarjournal.com/paintings/canvas/how-to-use-multiple-canvas-in-html5/
