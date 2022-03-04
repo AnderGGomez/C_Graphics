@@ -26,13 +26,8 @@ function circunferencia(x,y, radio, inicioArc, finArc, gradiente){
 
 
 function petalo (x,y, radio,radianInicio, radiaFinal, ancho, largo, ancho1, largo1){
-    //lienzo.beginPath();
-    //lienzo.fillStyle=gradiente;
     lienzo.moveTo(x+radio*Math.cos(radianInicio), y+radio*Math.sin(radianInicio));
     lienzo.bezierCurveTo(x-ancho,y-largo,x+ancho1,y+largo1,x+radio*Math.cos(radiaFinal), y+radio*Math.sin(radiaFinal));
-    //lienzo.stroke();
-    //lienzo.fill();
-    //lienzo.closePath();
 }
 
 function makePetalos (gradientePetalo, x, y, radio){
