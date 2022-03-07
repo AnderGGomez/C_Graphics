@@ -1,0 +1,31 @@
+#contenedor1{
+    position:relative;
+    height: 300px;
+}
+
+#one{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+#two{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    right: 0px;
+}
+
+
+
+
+#draw_one{
+    border: 1px solid blue;
+}
+
+#draw_two{
+    border: 1px solid red;
+}
+
