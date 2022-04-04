@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="figura">
+        <!-- Seguir ruta nueva-->
+        <svg width="270" height="270">
+            <rect x="-40" cy="-40" rx="25" width="80" height="80" fill="lime" >
+                <animateMotion path id="ruta1" d="M50,50 l170,0 l0,85 a85,85,0,0,1,-170,0 l0,-85 z" dur="6s" rotate="auto" repeatCount="indefinite">
+                    <mpath xlink:href="#ruta1"/>
+                </animateMotion>
+            </rect>
+        </svg>
+    </div>
+    <div id="canv">
+        <canvas width="1000" height="1000" id="canvas">
+
+        </canvas>
+    </div>
+    <script src="text.js"></script>
+</body>
+</html>

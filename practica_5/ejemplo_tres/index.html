@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="figura">
+        <!-- Seguimiento de ruta existente-->
+        <svg width="270" height="270">
+            <path id="ruta1" d="M50,180 c0,-200 100,-150 80,-50 s30,150 100,-70 m180,120 z" 
+            fill="none" stroke="blue" stroke-width="3"/>
+
+            <ellipse cx="0" cy="-18" rx="25" ry="15" fill="green" stroke="black" stroke-width="2">
+                <animateMotion dur="6s" rotate="auto" repeatCount="indefinite">
+                    <mpath xlink:href="#ruta1"/>
+                </animateMotion>
+            </ellipse>
+        </svg>
+    </div>
+    <div id="canv">
+        <canvas width="1000" height="1000" id="canvas">
+
+        </canvas>
+    </div>
+    <script src="text.js"></script>
+</body>
+</html>

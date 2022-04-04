@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document SVG</title>
+</head>
+
+<body>
+    <svg width="270" height="110">
+        <rect x="10" y="10" width="80" height="80" fill="blue">
+            <animate attributeType="XML" attributeName="x"
+            from="10" to="180" dur="3s" begin="0"
+            fill="restore" repeatCount="indefinite">
+
+            </animate>
+        </rect>
+    </svg>
+
+    <svg width="250" height="150">
+        <ellipse cx="125" cy="75" rx="120" ry="70" fill="orange">
+            <set attributeType="XML" attributeName="fill"
+            to="red" dur="10s" begin="7s" fill="restore">
+            </set>
+        </ellipse>
+    </svg>
+
+    <!-- Seguimiento de ruta existente-->
+    <svg width="270" height="270">
+        <path id="ruta1" d="M50,180 c0,-200 100,-150 80,-50 s30,150 100,-70 m180,120 z" 
+        fill="none" stroke="blue" stroke-width="3"/>
+
+        <ellipse cx="0" cy="-18" rx="25" ry="15" fill="green" stroke="black" stroke-width="2">
+            <animateMotion dur="6s" rotate="auto" repeatCount="indefinite">
+                <mpath xlink:href="#ruta1"/>
+            </animateMotion>
+        </ellipse>
+    </svg>
+
+    <!-- Seguir ruta nueva-->
+    <svg width="270" height="270">
+        <!-- 
+        <path id="ruta1" d="M50,180 c0,-200 100,-150 80,-50 s30,150 100,-70 m180,120 z" 
+        fill="none" stroke="blue" stroke-width="3"/>
+        -->
+
+        <rect x="-40" cy="-40" rx="25" width="80" height="80" fill="lime" >
+            <animateMotion path id="ruta1" d="M50,50 l170,0 l0,85 a85,85,0,0,1,-170,0 l0,-85 z" dur="6s" rotate="auto" repeatCount="indefinite">
+                <mpath xlink:href="#ruta1"/>
+            </animateMotion>
+        </rect>
+    </svg>
+
+    <svg width="270" height="120">
+        <g transform="tranlate(10 20)">
+            <rect z="0" y="0" width="80" height="80"
+            fill="aqua" stroke="blue" stroke-width="3">
+            <animateTransform attributeType="XML" attributeName="transform"
+            type="scale" from="1 0.5" to="2.7 1" dur="4s"
+            begin="0s" fill="freeze" repeatCount="indefinite" />
+            </rect>
+        </g>
+    </svg>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="270" height="270">
+        <rect x="10" y="10" height="80" width="80" fill="blue" stroke="red" stroke-width="2">
+            <animate id="r1" attributeType="XML" attributeName="x" values="10;170;10" dur="2s" begin="0s;r4.end+2s"/>
+        </rect>
+
+        <rect x="10" y="10" height="80" width="80" fill="red" stroke="navy" stroke-width="2">
+            <animate id="r2" attributeType="XML" attributeName="x" values="10;170;10" dur="2s" begin="r1.end"/>
+        </rect>
+
+        <rect x="10" y="10" height="80" width="80" fill="yellow" stroke="navy" stroke-width="2">
+            <animate id="r3" attributeType="XML" attributeName="x" values="10;170;10" dur="2s" begin="r2.end"/>
+        </rect>
+
+        <rect x="10" y="10" height="80" width="80" fill="green" stroke="navy" stroke-width="2">
+            <animate id="r4" attributeType="XML" attributeName="x" values="10;170;10" dur="2s" begin="r3.end"/>
+        </rect>
+    </svg>
+</body>
+
+</html>

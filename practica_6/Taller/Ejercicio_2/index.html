@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <svg width="400" height="400">
+
+        <rect x="10" y="10" height="50" width="50" fill="blue" stroke="red" stroke-width="3">
+            <animateTransform id="one" attributeType="XML" attributeName="transform" 
+            type="rotate" from="0 35 35"  to= "360 35 35" dur="3s" begin="0s;five.end;four.end"
+            />
+        </rect>
+        
+
+        <rect x="10" y="70" height="50" width="50" fill="red" stroke="blue" stroke-width="3">
+            <animate id="two" attributeType="XML" attributeName="x" values="10;350;10" dur="6s" begin="one.end"/>
+        </rect>
+
+        <rect x="10" y="130" height="50" width="50" fill="green" stroke="yellow" stroke-width="3">
+            <animateTransform id="three" attributeType="XML" attributeName="transform" 
+            type="translate"
+            values="0,0;340,0;340,-120;0,-120;0,0" 
+            dur="6s" begin="two.end"/>
+        </rect>
+
+        <rect x="10" y="190" height="50" width="50" fill="yellow" stroke="green" stroke-width="3">
+            <animate id="four" attributeType="XML" attributeName="x" values="10;200;10" dur="6s" begin="three.end"/>
+        </rect>
+
+        <rect x="10" y="250" height="50" width="50" fill="orange" stroke="blue" stroke-width="3">
+            <animate id="five" attributeType="XML" attributeName="x" values="10;200;10" dur="6s" begin="three.end"/>
+        </rect>
+
+    </svg>
+</body>
+</html>

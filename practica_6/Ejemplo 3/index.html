@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <svg width="270" height="270">
+        <rect x="5" y="5" width="260" height="30" fill="yellow" stroke="navy"/>
+        <rect x="5" y="235" width="260" height="30" fill="yellow" stroke="navy"/>
+        
+        <text id="rotar" x="15" y="30"
+        style="fill: navy;font: bold 20px 'comic sans ms'; cursor:pointer">Rotar</text>
+
+        <text id="inclinar" x="120" y="30"
+        style="fill: navy;font: bold 20px 'comic sans ms'; cursor:pointer">Inclinar</text>
+
+        <text id="parar" x="90" y="260"
+        style="fill: navy;font: bold 20px 'comic sans ms'; cursor:pointer">Parar</text>
+
+        <g transform="translate(135 135)">
+            <rect id="rect1" x="-50" y="-50" width="100" height="100"
+            fill="#ff0000" stroke="black" stroke-width="2">
+    
+            <animateTransform attributeType="XML" attributeName="transform" type="rotate" values="0;360" dur="3s"
+            repeatCount="indefinite" begin="rotar.click" end="parar.click"/>
+            
+            <animateTransform attributeType="XML" attributeName="transform" type="skewX" values="-30;45;-30" dur="3s"
+            repeatCount="indefinite" begin="inclinar.click" end="parar.click"/>
+
+            <animate attributeType="XML" attributeName="fill"
+            values="#ff0000;#00ff00;#0000ff;#ff0000" dur="4s"
+            repeatCount="indefinite" begin="rect1.mouseover" end="rect1.mouseout"/>
+
+        </rect>
+        </g>
+
+
+
+
+
+
+
+
+
+    </svg>
+
+    <script src="./code.js"></script>
+</body>
+
+</html>
