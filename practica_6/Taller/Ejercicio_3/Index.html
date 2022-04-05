@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <svg width="400" height="400">
+        <rect x="10" y="350" width="60" height="40"
+          fill="#FF5733" stroke="black" stroke-width="2">
+        </rect>
+
+        <rect x="80" y="350" width="60" height="40"
+          fill="#FF3333" stroke="black" stroke-width="2">
+        </rect>
+
+        <rect x="150" y="350" width="60" height="40"
+          fill="#04B297" stroke="black" stroke-width="2">
+        </rect>
+
+        <rect x="220" y="350" width="80" height="40"
+          fill="#04B234" stroke="black" stroke-width="2">
+        </rect>
+
+        <text id="go_x" x="20" y="375"
+        style="font-family: 'Courier New', Courier, monospace; cursor: pointer;">
+        go x
+        </text>
+
+        <text id="turn" x="90" y="375"
+        style="font-family: 'Courier New', Courier, monospace; cursor: pointer;">
+        turn
+        </text>
+
+        <text id="up_y" x="160" y="375"
+        style="font-family: 'Courier New', Courier, monospace; cursor: pointer;">
+        up y
+        </text>
+
+        <text id="down_y" x="230" y="375"
+        style="font-family: 'Courier New', Courier, monospace; cursor: pointer;">
+        down x
+        </text>
+
+        <g>
+            <rect id="square" x="180" y="180" width="40" height="40"
+            fill="red" stroke="black" stroke-width="2">
+           
+                <animateTransform id="one" attributeType="XML" attributeName="transform" 
+                type="rotate" from="0 200 200" to="360 200 200" dur="3s"
+                begin="turn.click+1s" end="go_x.click;up_y.click;down_y.click"/>
+
+                <animate id="two" attributeType="XML" attributeName="x" 
+                from="180" to="360" dur="3s"
+                begin="go_x.click+1s" end="turn.click;up_y.click;down_y.click"/>
+
+                <animate id="three" attributeType="XML" attributeName="y" 
+                from="180" to="0" dur="3s"
+                begin="up_y.click+1" end="turn.click;go_x.click;down_y.click"/>
+
+
+                <animate id="four" attributeType="XML" attributeName="y" 
+                from="180" to="300" dur="3s"
+                begin="down_y.click+1" end="turn.click;go_x.click;up_y.click"/>
+            </rect>
+        </g>
+    </svg>
+    
+</body>
+</html>
