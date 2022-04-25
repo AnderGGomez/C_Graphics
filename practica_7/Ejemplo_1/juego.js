@@ -8,8 +8,8 @@ kaboom({
 })
 
 loadRoot('https://i.imgur.com/')
-loadSprite('bloque','pogC9x5.png')
-loadSprite('mario','Wb1qfhK.png')
+loadSprite('bloque','LBcbMSI.png')
+loadSprite('mario','CtLdqAd.png')
 scene("juego", ()=>{
     layers(['bg','obj','ui'],'obj')
     const map = [

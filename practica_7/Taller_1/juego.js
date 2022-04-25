@@ -8,30 +8,30 @@ kaboom({
 })
 
 loadRoot('https://i.imgur.com/')
-loadSprite('bloque','M6rwarW.png')
-loadSprite('mario','Wb1qfhK.png')
+loadSprite('bloque','LBcbMSI.png')
+loadSprite('mario','CtLdqAd.png')
 loadSprite('tope','rl3cTER.png')
-loadSprite('rightPipe','hj2GK4n.png')
-loadSprite('leftPipe','ReTPiWY.png')
-loadSprite('leftBodyPipe','c1cYSbt.png')
-loadSprite('rightBodyPipe','nqQ79eI.png')
-loadSprite('boxQuest','gesQ1KP.png')
-loadSprite('fungi','KPO3fR9.png')
+loadSprite('pipe','cTvorF6.png')
+loadSprite('boxQuest','I9wqLvN.png')
+loadSprite('fungi','C90Lmfl.png')
+loadSprite('arbusto','DdmQs9f.png')
+loadSprite('cloud','TWMgOVY.png')
+loadSprite('mountain','rSZBAYn.png')
 
 scene("juego", ()=>{
     layers(['bg','obj','ui'],'obj')
     const map = [
         '                   ',
         '                   ',
+        '*          *       ',
         '                   ',
         '                   ',
+        '      ^            ',
         '                   ',
-        ' -_    ^           ',
         '                   ',
-        ' *+                ',
-        ' *+                ',
-        ' *+                ',
-        'f*+    %         f ',
+        ' _                 ',
+        '                   ',
+        'f    + %-        f ',
         '=============   ===',
         '=============   ===',
     ]
@@ -39,14 +39,14 @@ scene("juego", ()=>{
          width: 20,
          height: 20,
 
-         '=': [sprite('bloque'),solid()],
-         '%': [sprite('mario'),solid()],
-         '-': [sprite('leftPipe'),solid()],
-         '_': [sprite('rightPipe'),solid()],
-         '*': [sprite('leftBodyPipe'),solid()],
-         '+': [sprite('rightBodyPipe'),solid()],
+         '=': [sprite('bloque'),solid(),scale(1.2)],
+         '%': [sprite('mario'),solid(), scale(1.2)],
          '^': [sprite('boxQuest'),solid()],
-         'f': [sprite('fungi'),solid()]
+         'f': [sprite('fungi'),solid(), scale(1.2)],
+         '_': [sprite('pipe'),solid(),],
+         '*': [sprite('cloud'),scale(1.2),],
+         '-': [sprite('mountain'),scale(1.2)],
+         '+': [sprite('arbusto'),scale(1.2)],
      }
      const gameLevel = addLevel(map, levelCfg)
 })
